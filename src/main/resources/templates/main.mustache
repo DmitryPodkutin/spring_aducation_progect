@@ -27,12 +27,21 @@
     </form>
 </div>
 <p>
-{{#messages}}
-    <div>
-        <b>{{id}}. </b>
-        <span>{{text}} </span>
-        <i>#{{tag}}</i>
-    </div>
-{{/messages}}
+<table border="0" cellpadding="8">
+    <tr>
+        <th>Id</th>
+        <th>Message</th>
+        <th>Tag</th>
+        <th>Author</th>
+    </tr>
+    {{#messages}}
+        <tr>
+            <td>{{id}}.</td>
+            <td>{{text}}</td>
+            <td>#{{tag}}</td>
+            <td>{{ author}}</td>
+        </tr>
+    {{/messages}}
+</table>
 </body>
 </html>
