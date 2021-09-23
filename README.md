@@ -19,3 +19,6 @@ spring.jpa.generate-ddl=true
 ### Documents 
 [Руководство по JPA репозиториям- JPA Repositories ](https://docs.spring.io/spring-data/jpa/docs/1.5.0.RELEASE/reference/html/jpa.repositories.html#jpa.query-methods.query-creation)
 
+[Разметка MD файла](http://coddism.com/zametki/razmetka_readmemd_v_github)
+
+
