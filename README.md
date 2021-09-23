@@ -8,7 +8,7 @@
 #Properties file for postgres 
 spring.datasource.url=jdbc:postgresql://localhost/spring
 spring.datasource.username=postgres
-spring.datasource.password=251008
+spring.datasource.password=******
 spring.jpa.generate-ddl=true
 ```
 #### [Securing a Web Application (Spring Boot Security)](https://spring.io/guides/gs/securing-web/)
