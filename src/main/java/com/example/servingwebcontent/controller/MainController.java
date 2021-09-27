@@ -30,7 +30,7 @@ public class MainController {
 
     @PostMapping("/main")
     String add(@AuthenticationPrincipal User user, @RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
-        Message message = new Message(text, tag, user.getUsername());
+        Message message = new Message(text, tag, user);
         messageRepo.save(message);
         findAll(model);
         return "main";

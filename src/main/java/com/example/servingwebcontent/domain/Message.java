@@ -1,10 +1,8 @@
 package com.example.servingwebcontent.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Entity
 public class Message {
@@ -13,12 +11,15 @@ public class Message {
     private Integer id;
     private String text;
     private String tag;
-    private String author;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
 
     public Message() {
     }
 
-    public Message(String text, String tag, String author) {
+    public Message(String text, String tag, User author) {
         this.text = text;
         this.tag = tag;
         this.author = author;
@@ -44,11 +45,15 @@ public class Message {
         this.tag = tag;
     }
 
-    public String getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public String getAuthorName() {
+        return author == null ? "<none>" : author.getUsername();
+    }
+
+    public void setAuthor(User author) {
         this.author = author;
     }
 }
